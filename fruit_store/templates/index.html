@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <!-- my own css file link in the last position to be priority-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/fruit_store.css') }}">   
+    <script src="{{ url_for('static', filename='JS/fruit_store.js') }}"></script>
+
+    </head>
+    <body>
+            <h2>Dojo Fruit Store!</h2>
+            <div class="container">
+                    <form action = "/checkout" method = "POST">
+                        <h3>What would you like to buy?</h3>
+                        <table >                      
+                            <tr>
+                                <th>Fruit Name</th>
+                                <th>Quantity</th>
+                            </tr>                           
+                            <tr>
+                                <td class="form-control" id="inputState" name="Fruit Name">Strawberry</td>
+                                <td name = "Quantity">                            
+                                    <div class="col-sm-10">
+                                        <select id="inputState" class="form-control" name = "Strawberry">
+                                            <option selected>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>                           
+                            <tr>
+                                <td class="form-control" id="inputState" name="Fruit Name">Raspberry</td>
+                                <td name = "Quantity">                            
+                                    <div class="col-sm-10">
+                                        <select id="inputState" class="form-control" name = "Rasberry">
+                                            <option selected>1</option>
+                                            <option>0</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>                           
+                            <tr>
+                                <td class="form-control"id="inputState"  name="Fruit Name">Apple</td>
+                                <td name = "Quantity">                            
+                                    <div class="col-sm-10">
+                                        <select id="inputState" class="form-control" name = "Apple">
+                                            <option selected>4</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>0</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>                           
+                        </table>
+
+                        <h3>Your Information</h3>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label" >Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="Please, enter your full name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Your Student ID:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="Please, enter your student ID">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buy me stuff!</button>
+                    </form>
+            </div>
+            <div class="right_size">
+                <h5> Welcome to Dojo Fruit Store</h5>
+                <p> Your dojo decided right about the documenting it, I slightly updated my comments. Why is my answer different than the other ones? Simply because it gets straight to the point. I wrote only what the OP asked, and it works without any additional question</p>
+            </div>
+
+        </body>
+</html>
+

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <!-- my own css file link in the last position to be priority-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/counter.css') }}">   
+    <script src="{{ url_for('static', filename='JS/counter.js') }}"></script>
+
+    </head>
+    <body class="container">
+        <h3 >Welcome to the Great Number Game! </h3>
+        <span> I am thinking of a number between 1 and 100</span>   
+        <span> Take a guess! </span> 
+
+        <form action="/", method="POST"> <!-- action="/" is the route where the form gonna post. -->
+            <p class="low">Too low!</p>
+            <input type="text" class="form-control col-sm-10" id="inputEmail3" name="guess" placeholder="Enter your guess here">
+            <button  type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        {% to_guess > guess %}
+        <form action="/low", method="POST"> <!-- action="/low" is the route where the form gonna post. -->
+            <p class="low">Too low!</p>
+            <input type="text" class="form-control col-sm-10" id="inputEmail3" name="guess" placeholder="Try again!">
+            <button  type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {% endif %}
+
+        {% guess > to_guess %}
+        <form action="/high", method="POST">
+            <p class="high"> Too high </p>
+            <input type="text" class="form-control col-sm-10" id="inputEmail3" name="guess" placeholder="Try again!">
+            <button  type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {% endif %}
+
+        {% guess == guess %}
+        <form action="/egal", method="POST">
+            <p class="egal"> {{ right_number }} was the nmber! </p>
+            <button  type="submit" class="btn btn-primary"> Play again! </button>
+        </form>
+        {% endif %}
+
+    </body>
+</html>
+

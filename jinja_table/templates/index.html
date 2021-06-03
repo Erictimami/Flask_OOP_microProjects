@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: whitesmoke;
+                margin: 0px auto;
+                width: 1000px;
+                padding: 180px;
+                box-sizing: border-box;
+            }
+            table {
+                background-color: whitesmoke;
+                margin: 0px auto;
+                width: 1000px;
+                box-sizing: border-box;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+
+        <table class="table table-bordered">
+                <tr>
+                {% for order_key in tableOfUsers[0].keys() %}
+                  <th scope="col">{{ order_key }}</th>
+                {% endfor %}  
+                <th scope="col"> Full Name </th>
+                </tr>
+
+                {% for dict in tableOfUsers%}
+                    <tr>
+                        {% for order_key in tableOfUsers[0].keys() %}
+                            <td>{{ dict[order_key] }}</td>
+                        {% endfor %}
+                        <td>{{ dict['first_name']+' '+dict['last_name'] }}</td>
+
+                    </tr>                          
+                {% endfor %}        
+                              
+      
+        </table>
+    </body>
+</html>
+

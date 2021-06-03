@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <!-- my own css file link in the last position to be priority-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/number_game.css') }}">   
+    <script src="{{ url_for('static', filename='JS/counter.js') }}"></script>
+
+    </head>
+    <body class="container">
+
+        <form action="/", method="POST"> <!-- action="/" is the route where the form gonna post. -->
+            <h3 >Welcome to the Great Number Game! </h3>
+            <span> <br> I am thinking of a number between 1 and 100</span>   
+            <span> <br> Take a guess! </span> 
+
+            <p class="{{ class_result }}" style="display: {{ display_result }} " >{{ result }}</p>
+
+            <input type="{{ type_input }}" class="form-control col-sm-10" id="inputEmail3" name="guess"  placeholder="Enter your guess">
+
+            <button  type="submit" class="btn btn-primary {{ class_button }}">{{ text_button }}</button>
+
+        </form>
+    </body>
+</html>
+

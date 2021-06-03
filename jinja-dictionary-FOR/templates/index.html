@@ -1,0 +1,17 @@
+<html>
+    <head>
+      <title>My second Template</title>
+    </head>
+    <body>
+      <h3>My flask template with embedded Python-like code</h3>
+
+      <h1>Random Numbers</h1>
+      {% for number in random_numbers: %}
+          <p>{{ number }}</p>
+      {% endfor %}
+      <h1>Students</h1>
+      {% for i in students: %}
+          <p><b>{{ i['name'] }}</b> is <b>{{ i['age'] }}</b> years old. </p>
+      {% endfor %}
+    </body>
+</html>

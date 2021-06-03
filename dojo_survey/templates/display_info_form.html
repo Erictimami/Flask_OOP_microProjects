@@ -1,0 +1,29 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/display_info_form.css') }}">   
+        <!-- <script src="{{ url_for('static', filename='JS/display_info_form.js') }}"></script> -->
+
+    </head>
+    <body>
+        {{ result }}
+            <div class="container">                   
+                <h1>Submitted Info</h1>
+                <ul class="list-group" id="list-group_1">
+                    {% for key in result.keys() %}
+                    <li class="list-group-item">{{ key }}</li>
+                    {% endfor %}
+                </ul>
+
+                <ul class="list-group" id="list-group_2">
+                    {% for value in result.values() %}
+                    <li class="list-group-item">{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <form action='/danger'>
+                <button type="submit" class="btn btn-primary">Go Back</button>
+            </form> 
+    </body>
+</html>
+

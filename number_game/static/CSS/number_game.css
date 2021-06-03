@@ -1,0 +1,66 @@
+
+
+.container{
+    margin: 0px auto;
+    text-align: center;
+    width: 1000px;
+    height: 700px;
+    border: solid 3px;
+    padding-top: 200px
+}
+
+
+h3{
+    margin: 0px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+p{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    border: solid 3px;
+    margin-bottom: 20px;
+}
+
+.low{
+    background-color: red;
+    margin: auto;
+    padding-top: 90px;  
+    margin-bottom: 20px;
+}
+.high{
+    background-color: blue;
+    margin: auto;
+    padding-top: 90px;
+    margin-bottom: 20px;
+}
+
+.egal{
+    background-color: green;
+    margin: auto;
+    padding-top: 90px;
+}
+
+span{
+    display: block;
+}
+
+.b_submit{
+    height: 30px!important;
+    width: 150px!important;
+}
+.b_play{
+    height: 30px!important;
+    width: 150px!important;
+    margin-bottom: 100px;
+
+}
+input{
+    height: 30px;
+    width: 80px;
+    margin: center;
+
+}
+

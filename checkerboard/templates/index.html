@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: whitesmoke;
+                margin: 0px auto;
+                width: 1000px;
+                padding: 180px;
+                box-sizing: border-box;
+            }
+            table {
+                background-color: whitesmoke;
+                margin: 0px auto;
+                width: 1000px;
+                box-sizing: border-box;
+            }
+            
+            tr {
+                margin: 0px auto;
+                width: 1000px;
+                box-sizing: border-box;
+            }
+
+
+            h1 {
+                color: black;
+                font-weight: bold;
+                margin-bottom: 60px;
+                margin-left: 320px;
+                margin: center;
+            } 
+
+            td {
+                height: 50px;
+                width: 50px;
+                vertical-align: top;
+                display: inline-block;
+            }
+            .classColor1{
+                background-color: red;
+            }
+            .classColor2{
+                background-color: black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <table>
+            {% for j in range (xBoxes): %}
+                <tr>
+                    {% for i in range (yBoxes): %}  
+                            <td class='classColor{{ (j+i)%2 +1 }}'></td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

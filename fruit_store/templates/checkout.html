@@ -1,0 +1,30 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/checkout.css') }}">   
+        <!-- <script src="{{ url_for('static', filename='JS/display_info_form.js') }}"></script> -->
+
+    </head>
+    <body>
+            <form  action = "/fruit" class="container">                  
+                <h3>Thack you for your order! </h3>
+                <p> We ordered {{ Num }} items for you and charged your student account on {{ instant }}</p>
+                <h4> You're ordered</h4>
+                <ul class="list-group" id="list-group_1">
+                    <li class="list-group-item" id="li_2">Fruit Name</li>                    
+                    {% for key in result.keys() %}
+                    <li class="list-group-item">{{ key }}</li>
+                    {% endfor %}
+                </ul>
+
+                <ul class="list-group" id="list-group_2">
+                    <li class="list-group-item" id="li_2">Quantity</li> 
+                    {% for value in result.values() %}
+                    <li class="list-group-item">{{ value }}</li>
+                    {% endfor %}
+                </ul>
+                <button type="submit" class="btn btn-primary">Go Back</button>
+            </form> 
+    </body>
+</html>
+

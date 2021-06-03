@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: whitesmoke;
+                margin: 0px auto;
+                width: 1000px;
+                padding: 180px;
+            }
+
+            h1 {
+                color: black;
+                font-weight: bold;
+                margin-bottom: 60px;
+                margin-left: 320px;
+                margin: center;
+            } 
+            p {
+                background-color: LightBlue;
+                height: 250px;
+                width: 250px;
+                vertical-align: top;
+                display: inline-block;
+                margin-right: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h1>{{ message }} </h1>
+        {% for i in range (numBoxes): %}
+            <p></p>
+        {% endfor %}
+    </body>
+</html>

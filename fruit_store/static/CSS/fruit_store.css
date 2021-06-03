@@ -1,0 +1,53 @@
+
+body {
+    background-color: whitesmoke; 
+    margin: 0px auto;
+    width: 1000px;
+    border: none!important;
+    margin-top: 80px;
+    display: inline-block;
+}
+.container{
+    vertical-align: top;
+    
+}
+form {
+    margin: 0px auto;
+    width: 65%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+button{
+    margin-left: 365px;
+}
+
+label{
+    width: 100px!important;
+}
+
+.right_size{
+    vertical-align: top;
+    border: solid 2px;
+    width: 25%;
+    background-color: blueviolet
+
+}
+tr{
+    width: 100%;
+}
+td{
+    width: 50%;
+}
+table{
+    border: solid 2px;
+    width: 100%;
+}
+
+h2{
+    margin: 0px;
+    margin-left: 40px;
+}
+
